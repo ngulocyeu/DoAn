@@ -9,6 +9,3 @@ Link weights 9 class https://drive.google.com/file/d/1UQR1Uzg37jQ6Wtpfv9T5jlq3m9
 Models https://drive.google.com/drive/folders/1AwjjnMxdq3g5qOslR-SCXZqVelowDqa7?usp=sharing
 
 
-
-
-VideoTest https://drive.google.com/drive/folders/1EeJoBTeRgjRLQ3x3NMQiAouotd9mCMDj?usp=sharing
