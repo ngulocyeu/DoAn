@@ -449,7 +449,10 @@ def addGoal(image,colour):
 
 
     
-def calcOffset(goalPosition,ObjectPosition,height,width):
+def calcAngle(goalPosition,ObjectPosition,height,width):
+    
+    maxAngle = 100
+    minAngle = -100
 
     xG = goalPosition[0]
     xP = ObjectPosition[0]
@@ -457,10 +460,10 @@ def calcOffset(goalPosition,ObjectPosition,height,width):
     mappingRange = width/2
 
     if xP > xG:
-            offset = xP - mappingRange
+            offset = maxAngle * (xP - xG)/mappingRange
 
     elif xP < xG:
-            offset = mappingRange-xP
+            offset = minAngle * (xG - xP)/mappingRange
 
     else:
             offset = 0
