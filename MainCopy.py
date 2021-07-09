@@ -206,9 +206,9 @@ def Publish(client,imageFrame):
                         
                     #Distance calc
                     distance = calcObjectDistance(ObjectPosition,depthFrame)
-                    offset = calcOffset(goalPosition,ObjectPosition,height,width)
+                    angle = calcAngle(goalPosition,ObjectPosition,height,width)
 
-                    output = {'0': str(distance),'1': str(offset)}
+                    output = {'0': str(distance),'1': str(angle)}
 
                     OutPut = json.dumps(output)
 
@@ -226,7 +226,7 @@ def Publish(client,imageFrame):
                     frame = addBoundingBoxes(frame,[boundingBox],red)
                           
                     text1 = "Distance: "+str(round(distance, 2))
-                    text2 = "Offset: "+str(offset)
+                    text2 = "Angle: "+str(angle)
 
                     font = cv.FONT_HERSHEY_SIMPLEX
                     cv.putText(frame,text1,(16,68), font, 0.6,(0,0,255),1,cv.LINE_AA)
@@ -242,7 +242,7 @@ def Publish(client,imageFrame):
 
                 #Distance = calcFontDistance(depthFrame)
                 
-                a = {'0': '0.3', '1': '60'}
+                a = {'0': '0.3', '1': '20'}
                 
                 Output = json.dumps(a)
 
